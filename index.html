@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infotecs</title>
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="./css/style.css" rel="stylesheet">
+  <script src="./js/main.js" type="module"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      createInfotecsApp(document.getElementById('tbody'));
+    });
+  </script>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="header__title">Infotecs</h1>
+    </div>
+  </header>
+  <main class="main">
+    <div class="container main__container flex">
+      <h2 class="main__title">Таблица данных</h2>
+      <table class="main__table table">
+        <thead class="table__thead">
+          <tr class="table__tr-th">
+            <th class="table__th table__th_firstname" scope="col" data-path="0">
+              <button class="table__button btn-reset">Имя</button>
+            </th>
+            <th class="table__th table__th_lastname" scope="col" data-path="1">
+              <button class="table__button btn-reset">Фамилия</button>
+            </th>
+            <th class="table__th table__th_about" scope="col" data-path="2">
+              <button class="table__button btn-reset">Описание</button>
+            </th>
+            <th class="table__th table__th_eyecolor" scope="col" data-path="3">
+              <button class="table__button btn-reset">Цвет глаз</button>
+            </th>
+          </tr>
+        </thead>
+        <tbody id="tbody" class="table__tbody"></tbody>
+      </table>
+      <div class="pagination flex">
+        <div class="pagination__wrap-pag">
+          <button class="pagination__button pagination__button_left">&lt;</button>
+          <button class="pagination__button pagination__button_right">&gt;</button>
+        </div>
+        <div class="pagination__wrap-hidd">
+          <button class="pagination__button pagination__button_hidden" data-path="0">Скрыть имя</button>
+          <button class="pagination__button pagination__button_hidden" data-path="1">Скрыть фамилию</button>
+          <button class="pagination__button pagination__button_hidden" data-path="2">Скрыть описание</button>
+          <button class="pagination__button pagination__button_hidden" data-path="3">Скрыть цвет глаз</button>
+        </div>
+      </div>
+      <dialog class="dialog">
+        <div class="dialog__wrap flex">
+          <h3 class="dialog__title">Изменить данные</h3>
+          <div class="dialog__wrap-data flex">
+            <label class="dialog__label label">
+              <span class="label__descr">Имя</span>
+              <input class="dialog__input dialog__input_firstname" type="text">
+            </label>
+            <label class="dialog__label label">
+              <span class="label__descr">Фамилия</span>
+              <input class="dialog__input dialog__input_lastname" type="text">
+            </label>
+            <label class="dialog__label label">
+              <span class="label__descr">Описание</span>
+              <textarea class="dialog__input dialog__input_about"></textarea>
+            </label>
+            <label class="dialog__label label">
+              <span class="label__descr">Цвет глаз</span>
+              <input class="dialog__input dialog__input_eyecolor" type="text">
+            </label>
+          </div>
+          <button class="dialog__button dialog__button_save btn-reset" type="button">Сохранить</button>
+          <button class="dialog__button dialog__button_close btn-reset" aria-label="Закрыть диалоговое окно">
+            <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M22.2332 7.73333L21.2665 6.76666L14.4998 13.5334L7.73318 6.7667L6.76652 7.73336L13.5332 14.5L6.76654 21.2667L7.73321 22.2333L14.4998 15.4667L21.2665 22.2334L22.2332 21.2667L15.4665 14.5L22.2332 7.73333Z" fill="#000"/>
+            </svg>
+          </button>
+        </div>
+      </dialog>
+    </div>
+  </main>
+</body>
+</html>
+

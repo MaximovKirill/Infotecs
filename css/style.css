@@ -1,0 +1,249 @@
+:root {
+  --color-background-color: #e5e5e5;
+  --color-border: #C8C5D1;
+  --color-white: #fff;
+  --color-black: #333;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+html,
+body {
+  scrollbar-gutter: stable;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+body {
+  min-width: 320px;
+  max-width: 100%;
+	font-family: 'Times New Roman', Times, serif;
+  font-weight: 400;
+  color: var(--color-black);
+  background-color: var(--color-background-color);
+}
+
+/* glob */
+
+.flex {
+  display: flex;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.btn-reset {
+  padding: 0;
+  font-size: 14px;
+  line-height: 14px;
+  color: var(--color-black);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline-offset: 5px;
+}
+
+.scroll-lock {
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+/* header */
+
+.header {
+  background-color: var(--color-white);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.header__title {
+  margin: 0;
+  font-size: 32px;
+  line-height: 32px;
+  text-align: center;
+}
+
+/* main */
+
+.main__container {
+  flex-direction: column;
+  align-items: center;
+}
+
+.main__title {
+  margin: 0;
+  padding-bottom: 10px;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.main__table {
+  width: 50vw;
+}
+
+.table__tr-th {
+  height: 40px;
+  text-align: left;
+  border: none;
+}
+
+.table__th {
+  position: relative;
+  padding: 10px;
+  min-width: 75px;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.table__button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.table__button:active {
+  background-color: var(--color-background-color);
+}
+
+.table__tr {
+  height: 28px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.table__tbody {
+  background-color: var(--color-white);
+}
+
+.table__td {
+  padding: 10px;
+  font-size: 14px;
+  line-height: 14px;
+  border: none;
+  overflow: hidden;
+}
+
+.about__wrap {
+  width: 100%;
+  height: 2em;
+  overflow: hidden;
+}
+
+/* dialog */
+
+.dialog {
+  padding: 0;
+  border: none;
+}
+
+.dialog__wrap {
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  width: 450px;
+  padding: 10px;
+}
+
+.dialog::backdrop {
+  background-color: rgba(51, 51, 51, 0.6);
+}
+
+.dialog__title {
+  margin: 0;
+  padding: 10px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.dialog__wrap-data {
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+.label__descr {
+  font-size: 12px;
+  line-height: 12px;
+  color: var(--color-border);
+}
+
+.dialog__input {
+  width: 100%;
+  padding: 0;
+  padding-bottom: 5px;
+  font-size: 14px;
+  line-height: 14px;
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  outline: none;
+}
+
+.dialog__input:focus-visible {
+  border-bottom: 1px solid var(--color-black);
+}
+
+.dialog__input_about {
+  min-height: 100px;
+  resize: none;
+}
+
+.dialog__button_save {
+  padding: 10px;
+  border: 1px solid var(--color-black);
+  border-radius: 5px;
+}
+
+.dialog__button_save:active {
+  background-color: var(--color-background-color);
+}
+
+.dialog__button_close:hover {
+  transform: rotate(180deg);
+}
+
+.dialog__button_close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 29px;
+  height: 29px;
+  transition: transform .3s ease;
+}
+
+.dialog__button_close:hover {
+  transform: rotate(180deg);
+}
+
+.pagination {
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
