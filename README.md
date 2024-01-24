@@ -1,2 +1,2 @@
-# infotecs
-test
+# Infotecs
+Тестовое задание в компанию Infotecs.
